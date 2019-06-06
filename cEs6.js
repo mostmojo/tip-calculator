@@ -1,9 +1,3 @@
-/*
-
-8. Log to the console which family paid the highest tips on average
-
-*/
-
 const joe = {
     fullName: "Joe Reed",
     bills: [125, 49, 269, 181, 43],
@@ -11,10 +5,8 @@ const joe = {
         this.tips = [];
         this.finalValues = [];
         for(let i = 0; i < this.bills.length; i++){
-
             let percentage;
             let bill = this.bills[i]; // to resemble the value of a bill in the array when looping, we use the i counter variable
-
             if (bill < 50) {
                 percentage = 0.2;
             } else if (bill >= 50 && bill < 200) {
@@ -25,7 +17,6 @@ const joe = {
             this.tips[i] = bill * percentage;
             this.finalValues[i] = bill + (bill * percentage);
         }
-
     }
 }
 
@@ -36,10 +27,8 @@ const mat = {
         this.tips = [];
         this.finalValues = [];
         for(let i = 0; i < this.bills.length; i++){
-
             let percentage;
             let bill = this.bills[i];
-
             if (bill < 100) {
                 percentage = 0.2;
             } else if (bill >= 100 && bill < 300) {
@@ -50,7 +39,6 @@ const mat = {
             this.tips[i] = bill * percentage;
             this.finalValues[i] = bill + (bill * percentage);
         }
-
     }
 }
 
@@ -72,7 +60,6 @@ mat.calculateTip();
 joe.average = calcAvg(joe.tips);
 mat.average = calcAvg(mat.tips);
 console.log(joe, mat);
-
 
 if(joe.average > mat.average) {
     console.log(joe.fullName + "'s family paid more tips with an average of $" + joe.average);
