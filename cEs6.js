@@ -56,6 +56,14 @@ const mat = {
     }
 }
 
+const calcAvg = (tipz0rz) => {
+    sum = 0;
+    for(i = 0; i < tipz0rz.length; i++) {
+        sum =+ tipz0rz[i];
+    }
+    return sum / tipz0rz.length;
+}
+
 joe.calcTip();
 mat.calcTip();
 console.log(joe, mark);
