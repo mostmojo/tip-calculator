@@ -25,7 +25,7 @@ Mat likes to tip 20% of the bill when the bill is less than $100, 10% when the b
 const joe = {
     fullName: "Joe Reed",
     bills: [124, 48, 268, 180, 42],
-    calcTip: () => {
+    calcTip: function() { // have to use ES5 syntax here to use this 🤷‍♂️
         this.tips = [];
         this.finalValues = [];
         for(let i = 0; i < this.bills.length; i++){
@@ -37,8 +37,15 @@ const joe = {
                 percentage = 0.2;
             } else if (bill >= 50 && bill < 200) {
                 percentage = 0.15;
+            } else {
+                percentage = 0.1;
             }
+            this.tips[i] = bill * percentage;
+            this.finalValues = bill + (bill * percentage);
         }
 
     }
 }
+
+joe.calcTip();
+console.log(joe);
