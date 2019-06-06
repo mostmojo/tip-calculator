@@ -50,6 +50,8 @@ var mark = {
 	}
 }
 
+// Scope of this function is global .window object as it doesn't have a class or object declaration
+
 function calcAverage(tipzorz) {
     var sum = 0;
     for(var i = 0; i < tipzorz.length; i++) {

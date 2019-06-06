@@ -1,6 +1,5 @@
 /*
 
-6. Create a function (not a method) to calculate the average of a given array of tips. HINT: Loop over the array, and in each iteration store the current sum in a variable (starting from 0). After you have the sum of the array, divide it by the number of elements in it (that's how you calculate the average)
 7. Calculate the average tip for each family
 8. Log to the console which family paid the highest tips on average
 
@@ -8,7 +7,7 @@
 
 const joe = {
     fullName: "Joe Reed",
-    bills: [124, 48, 268, 180, 42],
+    bills: [125, 49, 269, 181, 43],
     calcTip: function() { // have to use ES5 syntax here to use this 🤷‍♂️
         this.tips = [];
         this.finalValues = [];
@@ -33,7 +32,7 @@ const joe = {
 
 const mat = {
     fullName: "Mat Jeez",
-    bills: [77, 375, 110, 45],
+    bills: [78, 376, 111, 46],
     calcTip: function() {
         this.tips = [];
         this.finalValues = [];
@@ -56,7 +55,7 @@ const mat = {
     }
 }
 
-const calcAvg = (tipz0rz) => {
+calcAvg = (tipz0rz) => {
     sum = 0;
     for(i = 0; i < tipz0rz.length; i++) {
         sum =+ tipz0rz[i];
@@ -64,6 +63,10 @@ const calcAvg = (tipz0rz) => {
     return sum / tipz0rz.length;
 }
 
+// We need to call calcTip first as it contains the this.tip arrays, which we use when we declare name.average and invoke calcAvg🤓
 joe.calcTip();
 mat.calcTip();
-console.log(joe, mark);
+
+joe.average = calcAvg(joe.tips);
+mat.average = calcAvg(mat.tips);
+console.log(joe, mat);
