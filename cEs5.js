@@ -60,7 +60,6 @@ function calcAverage(tipzorz) {
 
 john.calcTips();
 mark.calcTips();
-console.log(john, mark);
 
 /*
 CRUD: "Update" - just like any object mutation, we can assign calcAverage(john.tips),
