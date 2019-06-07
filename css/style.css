@@ -1,0 +1,19 @@
+/* --- Fonts --- */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+
+/* --- Animate library --- */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css');
+
+/* --- Components --- */
+@import url(components/typography.css);
+@import url(components/section.css);
+@import url(components/figure.css);
+@import url(components/button.css);
+
+/* --- Reset --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
